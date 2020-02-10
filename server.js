@@ -15,7 +15,7 @@ io.on("connection", socket => {
   socket.on("createMessage", newMessage => {
     if (newMessage.includes("Paras")) {
       socket.emit("newMessage", "nice guy");
-    } else console.log("nhio");
+    } else socket.emit("newMessage", "Sorry I am not trained for this!");
   });
 
   // when server disconnects from user
